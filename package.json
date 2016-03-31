@@ -24,7 +24,6 @@
     "zone.js": "^0.6.6"
   },
   "devDependencies": {
-    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.14.0",
     "jasmine-core": "2.4.1",
     "karma": "^0.13.22",
@@ -38,7 +37,6 @@
     "phantomjs-prebuilt": "^2.1.7",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.2.0",
-    "style-loader": "^0.13.1",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.9",
     "typings": "^0.7.9",
