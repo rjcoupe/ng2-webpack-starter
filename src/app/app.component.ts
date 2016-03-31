@@ -3,7 +3,8 @@ import {Hero} from './hero';
 
 @Component({
     selector: 'my-app',
-    template: require('./app.component.html')
+    template: require('./app.component.html'),
+    styles: [ require('./app.scss') ]
 })
 export class AppComponent { 
     hero: Hero;
