@@ -1,15 +1,17 @@
 import {Component} from 'angular2/core';
+import {MapComponent} from './map/map.component';
 import {Hero} from './hero';
 
+declare var window: any;
+
+var $ = require('jquery');
+window.$ = $;
+window.jQuery = $;
+
 @Component({
-    selector: 'my-app',
+    selector: 'app',
     template: require('./app.component.html'),
-    styles: [ require('./app.scss') ]
+    styles: [],
+    directives: [MapComponent]
 })
-export class AppComponent { 
-    hero: Hero;
-    
-    ngOnInit() {
-        this.hero = new Hero(1, 'The Flash', 'Super Speed', 'Barry Allen');
-    }
-}
+export class AppComponent {}
