@@ -1,6 +1,4 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
-
 module.exports = {
     context: __dirname,
     entry: {
@@ -27,18 +25,14 @@ module.exports = {
         loaders: [
             { test: /\.html$/,  loader: 'raw' },
             { test: /\.css$/,   loader: 'raw' },
-	        { test: /\.scss$/,  loader: 'raw-loader!sass-loader' },
+	    { test: /\.scss$/,  loader: 'raw-loader!sass-loader', exclude: /node_modules/ },
             { test: /\.ts$/, loader: 'ts-loader' }
         ]
     },
     resolve: {
-        extensions: ['','.ts','.js','.json'],
-        modulesDirectories: ['node_modules']
+        extensions: ['','.ts','.js','.json']
     },
-    plugins: [
-	new HtmlWebpackPlugin({ template: 'src/index.html', chunksSortMode: 'none' }),
-	new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" })
-    ],
+    plugins: [new HtmlWebpackPlugin({ template: 'src/index.html', chunksSortMode: 'none' })],
     devServer: {
         port: 3000,
         host: "localhost",
